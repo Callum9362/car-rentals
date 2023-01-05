@@ -24,7 +24,7 @@ class CarFactory extends Factory
             'make' => $makes[rand(0,3)],
             'model' => $models[rand(0,3)],
             'year' => fake()->year(),
-            'license_plate' => Str::random(10)
+            'license_plate' => strtoupper(Str::random(10))
         ];
     }
 }

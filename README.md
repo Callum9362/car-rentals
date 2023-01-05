@@ -21,13 +21,9 @@ The Customers table and the Rentals table might have a one-to-many relationship,
 
 The Locations table and the Rentals table might have a one-to-many relationship, where each location can have many rentals, but each rental is at a single location.
 
-The Cars table and the Reservations table might have a one-to-many relationship, where each car can have many reservations, but each reservation is for a single car.
-
-The Customers table and the Reservations table might have a one-to-many relationship, where each customer can have many reservations, but each reservation is made by a single customer.
-
 The Rentals table and the Payments table might have a one-to-many relationship, where each rental can have many payments
 
 
 ### Useful commands
 sail artisan migrate:fresh --seed
-# car-rentals
+

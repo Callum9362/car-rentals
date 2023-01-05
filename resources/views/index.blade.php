@@ -1,5 +1,5 @@
 @extends('layouts.default')
 
 @section('content')
-    <h1>Hello World</h1>
+    <p class="text-3xl font-bold">Hello World</p>
 @endsection

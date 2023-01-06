@@ -1,4 +1,6 @@
 @extends('layouts.main')
 @section('page')
-    @yield('content')
+    <div class="md:mx-auto">
+        @yield('content')
+    </div>
 @endsection

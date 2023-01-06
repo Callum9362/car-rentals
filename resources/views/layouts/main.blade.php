@@ -8,9 +8,12 @@
 
         @livewireStyles
     </head>
+    <x-header></x-header>
     <body>
     @yield('page')
 
+
     @livewireScripts
     </body>
+    <x-footer></x-footer>
 </html>

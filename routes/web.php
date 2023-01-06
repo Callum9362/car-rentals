@@ -22,7 +22,6 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 
 Route::get('/cars', [CarController::class, 'index'])->middleware('auth')->name('cars');
 
-
 Route::get('/rentals', [RentalController::class, 'index'])->middleware('auth')->name('rentals');
 
 Auth::routes();

@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class CarsTableComponent extends Component
 {
+    protected $listeners = ['carAdded' => 'render'];
+
     public function render()
     {
         $cars = Car::all();

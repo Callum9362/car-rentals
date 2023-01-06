@@ -12,10 +12,10 @@
         </thead>
         <tbody>
         @foreach($cars as $car)
-            <tr class="bg-gray-100">
+            <tr class="bg-gray-100 text-center">
                 <td class="px-4 py-2">{{ $car->make }}</td>
                 <td class="px-4 py-2">{{ $car->model }}</td>
-                <td class="px-4 py-2">{{ $car->license }}</td>
+                <td class="px-4 py-2">{{ $car->license_plate }}</td>
             </tr>
 
         @endforeach

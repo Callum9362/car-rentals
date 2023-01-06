@@ -3,6 +3,7 @@
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\RentalController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,7 @@ Route::get('/cars', [CarController::class, 'index'])->name('cars');
 
 
 Route::get('/rentals', [RentalController::class, 'index'])->name('rentals');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

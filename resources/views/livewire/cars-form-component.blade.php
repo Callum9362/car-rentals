@@ -1,6 +1,18 @@
 <div>
     @if ($success)
-        <p>{{ $success }}</p>
+        <div class="max-auto bg-green-500 p-4 rounded-md text-white shadow-md mt-3" role="alert">
+            <div class="flex items-center">
+                <div class="mx-2">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div>
+                    {{ $success }}
+                </div>
+                <button class="ml-2 text-white" wire:click="$set('success', null)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
     @endif
     <div class="flex items-center justify-center mt-10">
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2" wire:submit.prevent="createCar">

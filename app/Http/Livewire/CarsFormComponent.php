@@ -36,10 +36,10 @@ class CarsFormComponent extends Component
         $car = new Car();
         $car->make = $this->make;
         $car->model = $this->model;
-        $car->license_plate = $this->license_plate;
+        $car->license_plate = strtoupper($this->license_plate);
         $car->year = $this->year;
         $car->save();
-        $this->success = 'Message sent successfully!';
+        $this->success = 'Car add successfully!';
         $this->emit('carAdded');
         $this->refresh();
     }

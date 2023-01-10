@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class RentalController extends Controller
 {
-    public function index()
+    public function index($locationID)
     {
-        $rentals = Rental::all();
+        $rentals = Rental::where('location_id', $locationID)->get();
+        dd($rentals);
         return view('pages.rentals')
             ->with('rentals', $rentals);
     }

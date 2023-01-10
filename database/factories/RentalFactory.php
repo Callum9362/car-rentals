@@ -21,7 +21,8 @@ class RentalFactory extends Factory
             'end' => fake()->dateTimeThisMonth(),
             'rate' => fake()->numberBetween(100, 500),
             'customer_id' => fake()->numberBetween(1, 10),
-            'car_id' => fake()->numberBetween(1, 10)
+            'car_id' => fake()->numberBetween(1, 10),
+            'location_id' => fake()->numberBetween(1, 10)
         ];
     }
 }

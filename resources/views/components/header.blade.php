@@ -8,8 +8,7 @@
         <div class="w-3/4 flex items-center justify-end">
             @auth
                 <a href="{{ route('cars') }}" class="text-white hover:text-indigo-300 font-bold px-4">Cars</a>
-                <a href="{{ route('rentals') }}" class="text-white hover:text-indigo-300 font-bold px-4">Rentals</a>
-                <a href="#" class="text-white hover:text-indigo-300 font-bold px-4">Locations</a>
+                <a href="{{ route('locations') }}" class="text-white hover:text-indigo-300 font-bold px-4">Locations</a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button class="text-white hover:text-indigo-300 font-bold px-4" type="submit">Logout</button>

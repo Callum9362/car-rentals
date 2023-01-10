@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\RentalController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,7 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 
 
 Route::get('/cars', [CarController::class, 'index'])->middleware('auth')->name('cars');
-
-Route::get('/rentals', [RentalController::class, 'index'])->middleware('auth')->name('rentals');
+Route::get('/location', [LocationController::class, 'index'])->middleware('auth')->name('locations');
+Route::get('/rentals/{locationID}', [RentalController::class, 'index'])->middleware('auth')->name('rentals');
 
 Auth::routes();

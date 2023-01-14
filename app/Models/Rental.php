@@ -9,17 +9,17 @@ class Rental extends Model
 {
     use HasFactory;
 
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
+    }
+
     public function car()
     {
         return $this->belongsTo(Car::class);
     }
 
     public function customer()
-    {
-        return $this->belongsTo(Customer::class);
-    }
-
-    public function location()
     {
         return $this->belongsTo(Customer::class);
     }

@@ -10,8 +10,14 @@ class RentalController extends Controller
     public function index($locationID)
     {
         $rentals = Rental::where('location_id', $locationID)->get();
-        dd($rentals);
         return view('pages.rentals')
             ->with('rentals', $rentals);
+    }
+
+    public function view($id)
+    {
+        $rental = Rental::find($id);
+        return view('pages.rental')
+            ->with('rental', $rental);
     }
 }

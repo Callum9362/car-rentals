@@ -23,6 +23,11 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 
 Route::get('/cars', [CarController::class, 'index'])->middleware('auth')->name('cars');
 Route::get('/location', [LocationController::class, 'index'])->middleware('auth')->name('locations');
+
+// All rentals by locationID
 Route::get('/rentals/{locationID}', [RentalController::class, 'index'])->middleware('auth')->name('rentals');
+
+// Get a rental by its ID
+Route::get('/rental/{id}', [RentalController::class, 'view'])->middleware('auth')->name('rental-by-id');
 
 Auth::routes();

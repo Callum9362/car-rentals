@@ -9,9 +9,8 @@ class RentalController extends Controller
 {
     public function index($locationID)
     {
-        $rentals = Rental::where('location_id', $locationID)->get();
         return view('pages.rentals')
-            ->with('rentals', $rentals);
+            ->with('locationID', $locationID);
     }
 
     public function view($id)

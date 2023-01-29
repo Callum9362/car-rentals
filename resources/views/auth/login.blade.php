@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="flex items-center justify-center mt-10">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2" method="POST" action="{{ route('login') }}">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 sm:w-1/2 sm:flex-col" method="POST" action="{{ route('login') }}">
             @csrf
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
@@ -34,10 +34,11 @@
                 <button class="bg-indigo-600 hover:text-indigo-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                     Sign In
                 </button>
-                <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="{{ route('password.request') }}">
+                <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 ml-2" href="{{ route('password.request') }}">
                     Forgot Password?
                 </a>
             </div>
         </form>
     </div>
+
 @endsection
